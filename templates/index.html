@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>PyRandTest</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>🔷 PyRandTest</h1>
+        <p>Дабораторія генерації та перевірки випадкових послідовностей</p> 
+    </header>
+
+    <main>
+        <section class="intro">
+            <h2>Вітання!</h2>
+            <p>Це мій перший крок у створення вебплатформи на Flask</p>
+            <p>Введи своє ім'я, щоб протестувати форму:</p>
+
+            <form method="POST" action="/">
+                <input type="text" name="name" placeholder="Введи ім'я">
+                <button type="submit">Надіслати</button>
+            </form>
+
+            {% if user_name %}
+                <p class="result">Привіт, {{user_name}}!!!👋</p>
+            {% endif %}
+
+        </section>
+    </main>
+
+    <footer>
+        <p>2025 PyRandTest | Створено для практики Python/Flask + HTML + CSS</p>
+    </footer>
+
+</body>
+</html>
